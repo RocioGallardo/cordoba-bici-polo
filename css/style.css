@@ -1,0 +1,459 @@
+/* Para todas las páginas */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&family=Bebas+Neue&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+}
+
+body{
+    Background: linear-gradient(0deg,#18111f, #140d1a)
+}
+/* Navegador */
+.nav-header{
+    width: 100%;
+    padding-top: 30px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #140d1a;
+    box-shadow: 0px 0px 24px 1px #140d1a;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-areas: "ul-pages ul-perfil";
+    z-index: 1000;
+}
+.ul-pages{
+    grid-area: ul-pages;
+    display: flex;
+    justify-content: space-evenly;
+}
+.ul-perfil{
+    grid-area: ul-perfil;
+    display: flex;
+    justify-content: flex-end;
+}
+.logo-cbabp{
+    width: 60px;
+    margin: -20px 0px 0px 20px;
+}
+.pages, .li-perfil-iniciar, .li-perfil-registrarse {
+    padding: 12px;
+}
+
+.li-perfil-registrarse:link, .pages:link{
+    color: white;}
+.li-perfil-registrarse:hover, .pages:visited{
+    color: white;}
+.li-perfil-registrarse:hover, .pages:hover{
+    color: #ff2e5f;}
+.li-perfil-registrarse:active, .pages:active{
+    color: #42142a;}
+
+#color-amarillo:link{
+    color:#ffd452}
+#color-amarillo:visited{
+    color:#ffd452}
+#color-amarillo:hover{
+    color:#ff2e5f}
+#color-amarillo:active{
+    color:#42142a}
+
+.li-perfil-iniciar{
+    background-color: #ff2e5f;
+    border-radius: 20px;
+}
+.li-perfil-iniciar:hover{
+    background-color: #ffd452;
+    color: white;
+}
+
+/* INDEX */
+
+/* TITULO Y VIDEO */
+.main-index{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-index{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 180px;
+    margin-top: 250px;
+    color: #ffd452;
+}
+
+.video-index{
+    margin: 50px auto;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    opacity: 80%;
+}
+
+/* GRID ENTRENAMIENTOS INDEX*/
+.section-entrenamientos{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 150px 350px 350px 350px;
+    grid-template-areas:
+    "h2-entrenamientos h2-entrenamientos h2-entrenamientos"
+    "h3-info-donde iframe-mapa iframe-mapa"
+    "info-dia-horario info-dia-horario h3-dia-horario"
+    "h3-que-llevar info-que-llevar info-que-llevar ";
+    gap: 50px;
+    justify-items: center;
+    align-items: center;
+}
+.h3-dia-horario{grid-area: h3-dia-horario;}
+.h3-info-donde{grid-area: h3-info-donde;}
+.h3-que-llevar{grid-area: h3-que-llevar;}
+.info-dia-horario{grid-area: info-dia-horario;}
+.iframe-mapa{grid-area: iframe-mapa;}
+.info-que-llevar{grid-area: info-que-llevar;}
+
+.h3-dia-horario, .h3-donde, .h3-que-llevar{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+
+.h2-entrenamientos{
+    grid-area: h2-entrenamientos;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 70px;
+    color: #ffd452;
+}
+.iframe-mapa{
+    background-color: #ffffffbf;
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+}
+.info-dia-horario, .p-que-llevar {
+    font-size: 20px;
+    width: 100%;
+    height: 350px;
+    background-image: url(../assets/img/_DSC6508.png);
+    background-size: cover;
+    background-attachment: fixed;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.li-dia-horario, .p-dia-horario{
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* FOOTER PARA TODAS LAS PÁGINAS, */
+footer{
+    width: 100%;
+    margin-top: 100px;
+}
+.footer-ul{
+    /* display: inline-flex; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img-redes{
+    width: 30px;
+    padding: 5px;
+}
+
+/* Seccion Contacto */
+
+.formulario-contacto-fieldset{
+    width: 60%;
+    margin: 40px auto 100px;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    grid-template-areas: 
+    "label-nombre label-nombre"
+    "nombre nombre"
+    "label-email label-email"
+    "email email"
+    "label-telefono label-telefono"
+    "telefono telefono"
+    "label-mensaje label-mensaje"
+    "mensaje mensaje"
+    "none enviar";
+    gap: 10px;
+}
+
+#nombre, #email, #telefono, #mensaje{
+    background-color: #42142a;
+    border-radius: 20px;
+    border: none;
+    height: 40px;
+}
+
+#mensaje{
+    grid-area: mensaje;
+    height: 150px;
+}
+
+label{
+    text-align: left;
+    padding-left: 10px;
+}
+
+#enviar{
+    grid-area: enviar;
+    background-color: #ff2e5f;
+    width: 80px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+.label-nombre{grid-area: label-nombre;}
+#nombre{grid-area: nombre;}
+.label-email{grid-area: label-email;}
+#email{grid-area: email;}
+.label-telefono{grid-area: label-telefono;}
+#telefono{grid-area: telefono;}
+.label-mensaje{ grid-area: label-mensaje;}
+
+/* Reglamento */
+
+/* TITULO + NAV IDIOMAS */
+
+.main-reglamento{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.nav-idioma{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.nav-idioma-es, .nav-idioma-in, .nav-idioma-fr{
+    margin: 10px;
+    padding: 15px;
+    color: #140d1a;
+    border-radius: 25px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+
+}
+.nav-idioma-es{
+    background-color: #faeeca;
+}
+.nav-idioma-in{
+    background-color: #ffd452;
+}
+.nav-idioma-fr{
+    background-color: #ff2e5f;
+}
+
+/* reglamento - títulos y parrafos */
+
+.article-reglamento{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.titulo-reglamento-idioma{
+    font-size: 50px;
+    color: #ff2e5f;
+    margin-top: 40px;
+}
+.parrafo-reglamento{
+    width: 90%;
+    text-align: justify;
+}
+
+/* SOBRE NOSOTROS */
+
+.main-sobre-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.parrafo-sobre-nosotros{
+    margin-top: 20px;
+    width: 90%;
+    text-align: justify;
+}
+
+/* GRID NOTAS SOBRE NOSOTROS */
+
+.section-notas{
+    width: 95%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "h2-notas h2-notas h2-notas"
+    "nota-1 nota-2 nota-3";
+    gap: 20px;
+}
+.h2-notas{
+    grid-area: h2-notas;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffd452;
+    font-size: 30px;
+
+}
+.nota-1{grid-area: nota-1;}
+.nota-2{grid-area: nota-2;}
+.nota-3{grid-area: nota-3;}
+
+.nota-1, .nota-2, .nota-3{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #ffffff0d;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.img-nota{
+    margin: 20px 0px;
+    width: 90%;
+    border-radius: 20px;
+}
+.h3-notas{
+    margin: 20px auto;
+    width: 90%;
+    font-size: 15px;
+    text-align: center;
+}
+.p-web-nota{
+    padding-bottom: 20px;
+}
+
+/* PROXIMOS TORNEOS */
+
+.section-infernal{
+    width: 95%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #42142a1a;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "flyer-infernal h2-proximo-torneo"
+    "flyer-infernal parrafo-infernal"
+    "flyer-infernal parrafo-infernal";
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.flyer-infernal{
+    width: 100%;
+    grid-area: flyer-infernal;
+    border-radius: 20px;
+}
+
+.h2-proximo-torneo{
+    margin: 50px;
+    grid-area: h2-proximo-torneo;
+
+}
+.parrafo-infernal{
+    grid-area: parrafo-infernal;
+    text-align: justify;
+}
+.h2-proximo-torneo, .h3-proximos-torneos{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    color: #ff2e5f;
+    margin-top: 40px;
+}
+
+.section-proximo-torneo-participar{
+    width: 80%;
+    margin: 80px auto;
+    height: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boton-participar{
+    margin-top: 20px;
+    background-color: #ff2e5f;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.boton-participar:hover{
+    background-color: #ffd452;
+    color: white;
+}
+
+
+.titulo-contacto, .titulo-sobre-nosotros, .titulo-proximos-torneos, .titulo-reglamento {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 70px;
+    padding-top: 150px;
+    color: #ffd452;
+    text-align: center;
+}
+
+/* vista mobile */
+
+@media screen and (max-width: 567px){
+
+    .titulo-index{
+        font-size: 50px;
+    }
+    .section-entrenamientos{
+        display: flex;
+        flex-direction: column;
+    }
+    .h2-entrenamientos{
+        width: auto;
+        font-size: 50px;
+    }
+    .section-notas{
+        width: 60%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    /* acomodo sección infernal */
+    .section-infernal{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/*  PALETA DE COLORES
+color1 { #140d1a };
+color2 { #42142a };
+color3 { #ff2e5f };
+color4 { #ffd452 };
+color5 { #faeeca }; */
