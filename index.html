@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Cordoba Bici Polo</title>
 </head>
 <body>
@@ -34,12 +35,12 @@
         </nav>
     </header>
     <main class="main-index">
-        <h1 class="titulo-index">Cordoba Bici Polo</h1>
+        <h1 data-aos="fade-down"  class="titulo-index">Cordoba Bici Polo</h1>
         <video class="video-index" autoplay loop src="./assets/videos/video-index.mov"></video>
     </main>
     <section class="section-entrenamientos" >
-        <h2 class="h2-entrenamientos" >Entrenamientos</h2>
-        <div h3-info-donde >
+        <h2 data-aos="fade-down" class="h2-entrenamientos" >Entrenamientos</h2>
+        <div class="h3-info-donde">
             <h3 class="h3-donde" >¿Dónde entrenamos?</h3>
             <p class="p-donde" >Centro Vecinal San Rafael</p>
         </div>
@@ -58,8 +59,6 @@
             <p class="p-que-llevar" >Te recomendamos llevar <b> Casco,protecciones, taco y tu bici</b>. Si no tenés elementos para jugar no te preocupes, contamos con bicis, tacos y protecciones comunitarias para que las usen quienes quieran probar el deporte.</p>
         </div>
     </section>
-
-    
     <footer>
         <ul class="footer-ul" >
             <li>
@@ -76,5 +75,9 @@
             </li>
         </ul>
     </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
 </body>
 </html>

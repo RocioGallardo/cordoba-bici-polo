@@ -125,6 +125,22 @@ body{
 .h3-dia-horario, .h3-donde, .h3-que-llevar{
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+}
+
+@keyframes agrandar{
+    0%{
+        font-size: 50px;
+    }
+    50%{
+        font-size: 51px;
+    }
+    100%{
+        font-size: 50px;
+    }
 }
 
 .h2-entrenamientos{
@@ -139,7 +155,7 @@ body{
     height: 350px;
     border-radius: 20px;
 }
-.info-dia-horario, .p-que-llevar {
+.info-dia-horario, .info-que-llevar {
     font-size: 20px;
     width: 100%;
     height: 350px;
@@ -152,7 +168,7 @@ body{
     justify-content: center;
     align-content: center;
 }
-.li-dia-horario, .p-dia-horario{
+.li-dia-horario, .p-dia-horario, .p-que-llevar{
     margin: 0 auto;
     width: 80%;
 }
@@ -324,12 +340,16 @@ label{
 .nota-1, .nota-2, .nota-3{
     margin-top: 10px;
     width: 100%;
-    background-color: #ffffff0d;
+    background-color: #18111f;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    transition: 0,8s;
+}
+.nota-1:hover, .nota-2:hover, .nota-3:hover{
+    background-color: #ffffff0d;
 }
 .img-nota{
     margin: 20px 0px;
@@ -348,41 +368,61 @@ label{
 
 /* PROXIMOS TORNEOS */
 
-.section-infernal{
+
+.section-infernal, .section-entrevero{
     width: 95%;
     margin: 100px auto;
     padding: 20px;
     background-color: #42142a1a;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-    "flyer-infernal h2-proximo-torneo"
-    "flyer-infernal parrafo-infernal"
-    "flyer-infernal parrafo-infernal";
     gap: 20px;
     align-items: center;
     justify-items: center;
 }
-.flyer-infernal{
+.section-infernal{
+    grid-template-areas: 
+    "flyer-infernal h2-proximo-torneo-inf"
+    "flyer-infernal parrafo-infernal"
+    "flyer-infernal parrafo-infernal";
+}
+.section-entrevero{
+    grid-template-areas: 
+    "h2-proximo-torneo-ent flyer-entrevero"
+    "parrafo-entrevero flyer-entrevero"
+    "parrafo-entrevero flyer-entrevero";
+}
+
+.flyer-infernal{grid-area: flyer-infernal;}
+.flyer-entrevero{grid-area: flyer-entrevero;}
+.h2-proximo-torneo-ent{grid-area: h2-proximo-torneo-ent;}
+.h2-proximo-torneo-inf{grid-area: h2-proximo-torneo-inf;}
+.parrafo-infernal{grid-area: parrafo-infernal;}
+.parrafo-entrevero{grid-area: parrafo-entrevero;}
+
+.flyer-infernal, .flyer-entrevero{
     width: 100%;
-    grid-area: flyer-infernal;
     border-radius: 20px;
 }
 
-.h2-proximo-torneo{
+.h2-proximo-torneo-ent, .h2-proximo-torneo-inf{
     margin: 50px;
-    grid-area: h2-proximo-torneo;
-
+    font-family: 'Bebas Neue', cursive;
+    color: #ff2e5f;
+    font-size: 50px;
 }
-.parrafo-infernal{
-    grid-area: parrafo-infernal;
+
+.parrafo-infernal, .parrafo-entrevero{
     text-align: justify;
 }
-.h2-proximo-torneo, .h3-proximos-torneos{
+
+.h3-proximos-torneos{
+    margin-top: 40px;
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
-    color: #ff2e5f;
-    margin-top: 40px;
+    animation-name: agrandar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
 }
 
 .section-proximo-torneo-participar{
@@ -395,19 +435,34 @@ label{
     align-items: center;
 }
 .boton-participar{
-    margin-top: 20px;
-    background-color: #ff2e5f;
-    border-radius: 20px;
+    margin: 20px;
     width: 100px;
     height: 30px;
-    border: none;
+    padding-top: 10px;
+    background-color: #ff2e5f;
+    border-radius: 20px;
     text-align: center;
-    padding-top: 5px;
+    animation-name: boton;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
 }
 
 .boton-participar:hover{
     background-color: #ffd452;
     color: white;
+}
+
+@keyframes boton{
+0%{
+    width: 100px;
+}
+50%{
+    width: 105px;
+}
+100%{
+    width: 100px;
+}
 }
 
 
@@ -445,7 +500,7 @@ label{
 
 @media screen and (max-width: 900px){
     /* acomodo sección infernal */
-    .section-infernal{
+    .section-infernal, .section-entrevero{
         display: flex;
         flex-direction: column;
     }
